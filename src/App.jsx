@@ -90,11 +90,11 @@ function App() {
           </svg>
           <h2>Hobbies</h2>
           <ul>
-      {person[count].hobbies.map((hobby, index) => (
-        // Usamos o index aqui apenas porque a lista é estática e simples
-        <li key={index}>{hobby},</li>
-      ))}
-    </ul>
+   {typeof person[count].hobbies == "object" && person[count].hobbies.map((hobby, index) => (
+              // Usamos o index aqui apenas porque a lista é estática e simples
+              <li key={index}>{hobby},</li>
+            ))}
+            {typeof person[count].hobbies == "string" && person[count].hobbies}
         </div>
       </section>
 
