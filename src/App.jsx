@@ -95,7 +95,7 @@ function App() {
               <li key={index}>{hobby},</li>
             ))}
             {typeof person[count].hobbies == "string" && person[count].hobbies}
-          </ul>
+          </ul> 
         </div>
       </section>
 
