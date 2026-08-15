@@ -33,6 +33,13 @@ function App() {
     getData();
   },[])
 
+
+  const handleNext = () => {
+    if (count < person.length - 1) {
+      setCount((prev) => prev + 1);
+    }
+  };
+  
   if (loading) {
     return (<div>Carregando</div>)
   }
@@ -64,7 +71,7 @@ function App() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={handleNext}
         >
          Próximo
         </button></div>
